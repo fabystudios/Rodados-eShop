@@ -1,0 +1,566 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuente y colores globales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6200ea; /* Color primario MD3 */
+    color: white;
+    padding: 15px 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+.icono-carrito{
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.icono-carrito span {
+    background-color: #ff6f00; /* Color secundario MD3 */
+    color: rgb(34, 34, 34);
+    border-radius: 50%;
+    padding: 3px 8px;
+    font-size: 0.6rem;
+    margin-left: 5px;
+    font-weight: bold;
+}
+.icono-back{
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.icono-back span {
+    background-color: #ff6f00; /* Color secundario MD3 */
+    color: white;
+    border-radius: 50%;
+    padding: 3px 8px;
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+/* Navegación */
+nav ul {
+    
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    background-color: #bb86fc;
+    padding: 10px;
+    /* gap: 15px; */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #3700b3;
+}
+
+/* Sección de productos */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.producto {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.producto h2 {
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+    /* margin-bottom: 10px; */
+}
+
+.producto p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.producto .precio {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #6200ea;
+}
+
+.producto button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.producto button:hover {
+    /* background-color: #3700b3; */
+    background-color: #ff6f00; /* Color secundario MD3 */
+
+}
+
+
+/* Carrito */
+#carrito {
+    padding: 10px;
+}
+
+#carrito h2 {
+    font-size: 1.5rem;
+    /* margin-bottom: 20px; */
+    color: #6200ea;
+}
+
+/* --- Footer --- */
+
+/* Estilos base del footer */
+
+/* Estilos del logo en el footer */
+.footer-content .logo {
+    width: auto;
+    min-width: 120px;
+    max-width: 180px;
+    height: auto;
+}
+.image-container {
+    /* width: 100%; */
+     /* Asegura que el contenedor ocupa todo el ancho de la card */
+    /* height: 600px;  */
+    /* Altura fija para todas las imágenes */
+    /* height: 100%; */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se salga del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+.image-container img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    height: auto;
+}
+/* Estilos de los iconos sociales */
+/* Removed duplicate .social-icons and .social-icons a classes */
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px; /* Espacio entre los iconos */
+  }
+  
+  .social-icons a {
+    color: white; /* Color blanco para los iconos */
+    font-size: 24px; /* Tamaño de los iconos */
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #FFB74D; /* Color al hacer hover */
+  }
+
+/* Copyright */
+.footer-copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .footer {
+        padding: 1.5rem 0;
+    }
+
+    .footer-content .logo {
+        min-width: 100px;
+        max-width: 140px;
+    }
+
+    .footer-social .material-icons {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* ---- */
+.producto.md-3 {
+    margin: 1rem; /* Margen uniforme */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera para efecto flotante */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.producto.md-3:hover {
+    transform: translateY(-4px); /* Efecto de levitación */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+/* Estructura principal de la página */
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, contenido principal y footer */
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+    margin: 0;
+}
+
+/* Main ocupa todo el espacio disponible */
+main {
+    /* padding: 20px; */
+    background-color: hwb(0 96% 4%);
+}
+
+/* Footer en la parte inferior */
+.footer {
+    grid-row: 3; /* Posiciona explícitamente el footer en la tercera fila */
+    background-color: #6200ea;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+  nav {
+    margin: 0;
+    padding: 0;
+}
+
+/* header, nav {
+    border: 1px solid red;
+    para hacer seguimiento con devTools
+}
+* { tipico reseteo de css
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+ /* ----modal--- */
+/* Estilos del Modal con Material Design 3 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 24px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 28px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+    border: none;
+}
+
+.modal.show .modal-content {
+    transform: translateY(0);
+}
+
+#modal-message {
+    color: #1c1b1f;
+    font-size: 1rem;
+    margin: 16px 0;
+    line-height: 1.5;
+}
+
+.close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 36px;
+    height: 36px;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #6200ea;
+    font-size: 24px;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.close:hover {
+    background-color: #e8e8e8;
+}
+
+/* Animación de entrada */
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    animation: slideIn 0.3s ease forwards;
+}
+
+/* Estilos para el mensaje de éxito */
+#modal-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: #1f1f1f;
+}
+
+#modal-message::before {
+    content: '✓';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: #6200ea;
+    color: white;
+    border-radius: 50%;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 30% auto;
+        padding: 20px;
+    }
+}
+
+/* Estilos del Modal con Material Design 3 y Mascota */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 24px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 28px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+    border: none;
+    overflow: hidden;
+}
+
+/* Contenedor para la imagen de fondo */
+.modal-background {
+    position: absolute;
+    background-color: azure;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.modal-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Contenedor del mensaje */
+.modal-message-container {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0.5px;
+    border-radius: 16px;
+    margin-top: 60px;
+}
+
+#modal-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: #1f1f1f;
+    font-weight: 700; /* Increased font weight */
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Círculo de éxito */
+#modal-message::before {
+    content: '✓';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: #6200ea;
+    color: white;
+    border-radius: 50%;
+    font-size: 24px;
+    margin-bottom: 8px;
+    position: absolute;
+    top: -45px;
+    left: 8%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 8px rgba(98, 0, 234, 0.2);
+}
+
+.close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #6200ea;
+    font-size: 24px;
+    text-decoration: none;
+    line-height: 1;
+    z-index: 3;
+}
+
+.close:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* Animación de entrada */
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    animation: slideIn 0.3s ease forwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 30% auto;
+        padding: 20px;
+    }
+    
+    .modal-message-container {
+        margin-top: 50px;
+    }
+}
+.swal-md3-popup {
+    border-radius: 28px !important;
+    padding: 20px !important;
+    box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12) !important;
+}
+
+.swal-md3-button {
+    border-radius: 50px !important;
+    text-transform: uppercase !important;
+    font-weight: 500 !important;
+    padding: 8px 24px !important;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12) !important;
+    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.swal-md3-button:hover {
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12) !important;
+}
+
+/* Opcional: Para hacer los íconos más grandes y modernos */
+.swal2-icon {
+    transform: scale(1.2);
+    margin: 2.5em auto 1.6em !important;
+}
