@@ -1,17 +1,18 @@
-function Main() {  
-  return (
-    <section className="publicidad" style={{ padding: '20px', textAlign: 'center' }}>
-      <img
-        src="../images/publicidad.jpeg"
-        alt="Publicidad"
-        style={{ width: '100%', maxWidth: '1200px', borderRadius: '15px' }}
-      />
+import React from 'react';
+import publicidadImg from '../assets/publicidad.jpeg';  
+import '../styles/style.css';  
+
+
+const Main = () => {
+return (
+    <section className="publicidad" style={{ backgroundColor: 'black'}}>
+        <img
+            src={publicidadImg}
+            alt="Publicidad"
+            style={{ width: '100%', maxWidth: '1200px', borderRadius: '15px', background: 'black' }}
+        />
     </section>
-  );
-}  
-export default Main; 
+);
+};
 
-
- 
-
- 
+export default Main;

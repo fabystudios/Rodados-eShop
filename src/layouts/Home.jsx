@@ -1,7 +1,7 @@
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Nav from "../components/Nav"
-import Publicidad from "../components/publicidad"
+import Main from "../components/Main"
 import "../styles/style.css"
 
 function Home() {
@@ -10,7 +10,7 @@ function Home() {
         <div>
             <Header/>
             <Nav/>
-            <Publicidad/> 
+            <Main/> 
             <Footer/>
         </div>
     )
