@@ -2,17 +2,16 @@ import React from 'react';
 import publicidadImg from '../assets/publicidad.jpeg';  
 import '../styles/style.css';  
 
-
 const Main = () => {
-return (
-    <section className="publicidad" style={{ backgroundColor: 'black'}}>
-        <img
-            src={publicidadImg}
-            alt="Publicidad"
-            style={{ width: '100%', maxWidth: '1200px', borderRadius: '15px', background: 'black' }}
-        />
+  return (
+    <section className="publicidad">
+      <img
+        src={publicidadImg}
+        alt="Publicidad"
+        className="publicidad-img"
+      />
     </section>
-);
+  );
 };
 
 export default Main;
